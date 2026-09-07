@@ -1,65 +1,100 @@
-# Advanced Algorithms Course - Week 1 Algorithm Laboratory
+Advanced Algorithms Course - Week 2 Algorithm Laboratory
 
-## Author
 Jaymes McKenzie
 
+
+
 ## Description
-This project sets up a reusable Python algorithm laboratory for implementing,
-testing, benchmarking, and analyzing algorithms throughout the course.
 
-## Requirements
-- Python 3.9 or later
-- pip
-- Git
+This project builds on the Week 1 sorting project and adds Merge Sort and
 
-## Setup
+QuickSort. The purpose of Week 2 is to compare the O(n²) sorting algorithms
 
-### Windows PowerShell
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
+from Week 1 with O(n log n) divide-and-conquer algorithms.
 
-### macOS/Linux
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
 
-## Check the Environment
-```bash
-python environment_check.py
-```
 
-## Run Tests
-```bash
-pytest tests/ -v
-```
+The project includes:
 
-## Run Benchmarks
-```bash
-python benchmarks/sorting_benchmarks.py
-```
 
-Benchmark output is written to the `results/` directory.
 
-## Project Contents
-- `src/sorting/basic_sorts.py` - bubble, selection, and insertion sort
-- `src/utils/benchmark.py` - reusable benchmarking framework
-- `tests/` - pytest test suite
-- `benchmarks/sorting_benchmarks.py` - benchmark runner
-- `docs/week01_report.md` - performance-analysis report template
-- `results/` - generated CSV and PNG benchmark output
+\- Bubble Sort
 
-## Current Progress
-- [x] Environment setup
-- [x] Bubble sort
-- [x] Selection sort
-- [x] Insertion sort
-- [x] Benchmark framework
-- [x] Automated tests
-- [x] Performance report template
+\- Selection Sort
+
+\- Insertion Sort
+
+\- Merge Sort
+
+\- QuickSort
+
+
+
+Merge Sort uses recursive divide and conquer with a merge helper function.
+
+
+
+QuickSort includes:
+
+
+
+\- Random pivot selection
+
+\- Three-way partitioning
+
+\- Insertion Sort for small subarrays
+
+\- A threshold of 10 elements
+
+
+
+\## Project Structure
+
+
+
+```text
+
+week2\_project/
+
+├── README.md
+
+├── src/
+
+│   └── sorting/
+
+│       ├── basic\_sorts.py
+
+│       ├── merge\_sort.py
+
+│       ├── quick\_sort.py
+
+│       └── \_\_init\_\_.py
+
+├── tests/
+
+│   ├── test\_sorting.py
+
+│   ├── test\_merge\_sort.py
+
+│   ├── test\_quick\_sort.py
+
+│   ├── test\_sorting\_comparison.py
+
+│   └── test\_benchmark.py
+
+├── benchmarks/
+
+│   ├── week2\_performance.py
+
+│   └── results/
+
+├── analysis/
+
+│   ├── week2\_report.md
+
+│   └── master\_theorem\_exercises.md
+
+└── examples/
+
+&#x20;   └── week2\_demo.py
+
