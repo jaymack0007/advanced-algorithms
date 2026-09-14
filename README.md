@@ -1,20 +1,20 @@
-Advanced Algorithms Course - Week 2 Algorithm Laboratory
+\# Advanced Algorithms
+
+
 
 Jaymes McKenzie
 
 
 
-## Description
-
-This project builds on the Week 1 sorting project and adds Merge Sort and
-
-QuickSort. The purpose of Week 2 is to compare the O(n²) sorting algorithms
-
-from Week 1 with O(n log n) divide-and-conquer algorithms.
+This repository contains coursework and benchmarking projects for CSC5300 Advanced Algorithms.
 
 
 
-The project includes:
+\## Week 1
+
+
+
+Implemented and compared:
 
 
 
@@ -24,27 +24,49 @@ The project includes:
 
 \- Insertion Sort
 
+
+
+\## Week 2
+
+
+
+Added divide-and-conquer sorting algorithms:
+
+
+
 \- Merge Sort
 
 \- QuickSort
 
 
 
-Merge Sort uses recursive divide and conquer with a merge helper function.
+Benchmarks compared all five sorting algorithms across multiple input sizes and data types.
 
 
 
-QuickSort includes:
+\## Week 3
 
 
 
-\- Random pivot selection
+Implemented and analyzed:
 
-\- Three-way partitioning
 
-\- Insertion Sort for small subarrays
 
-\- A threshold of 10 elements
+\- Binary Min-Heap
+
+\- Binary Max-Heap
+
+\- Priority Queue
+
+\- AVL Tree
+
+\- Hash Table with Separate Chaining
+
+\- Hash Table with Open Addressing
+
+
+
+Week 3 benchmarks compare custom structures with Python `heapq`, `dict`, and list search.
 
 
 
@@ -54,47 +76,19 @@ QuickSort includes:
 
 ```text
 
-week2\_project/
+src/
 
-├── README.md
+├── sorting/
 
-├── src/
+└── structures/
 
-│   └── sorting/
 
-│       ├── basic\_sorts.py
 
-│       ├── merge\_sort.py
+tests/
 
-│       ├── quick\_sort.py
+benchmarks/
 
-│       └── \_\_init\_\_.py
+analysis/
 
-├── tests/
-
-│   ├── test\_sorting.py
-
-│   ├── test\_merge\_sort.py
-
-│   ├── test\_quick\_sort.py
-
-│   ├── test\_sorting\_comparison.py
-
-│   └── test\_benchmark.py
-
-├── benchmarks/
-
-│   ├── week2\_performance.py
-
-│   └── results/
-
-├── analysis/
-
-│   ├── week2\_report.md
-
-│   └── master\_theorem\_exercises.md
-
-└── examples/
-
-&#x20;   └── week2\_demo.py
+examples/
 
