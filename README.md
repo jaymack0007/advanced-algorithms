@@ -1,4 +1,4 @@
-\# Advanced Algorithms
+# Advanced Algorithms
 
 
 
@@ -10,7 +10,7 @@ This repository contains coursework and benchmarking projects for CSC5300 Advanc
 
 
 
-\## Week 1
+## Week 1
 
 
 
@@ -18,15 +18,15 @@ Implemented and compared:
 
 
 
-\- Bubble Sort
+- Bubble Sort
 
-\- Selection Sort
+- Selection Sort
 
-\- Insertion Sort
+- Insertion Sort
 
 
 
-\## Week 2
+## Week 2
 
 
 
@@ -34,9 +34,9 @@ Added divide-and-conquer sorting algorithms:
 
 
 
-\- Merge Sort
+- Merge Sort
 
-\- QuickSort
+- QuickSort
 
 
 
@@ -44,7 +44,7 @@ Benchmarks compared all five sorting algorithms across multiple input sizes and 
 
 
 
-\## Week 3
+## Week 3
 
 
 
@@ -52,25 +52,57 @@ Implemented and analyzed:
 
 
 
-\- Binary Min-Heap
+- Binary Min-Heap
 
-\- Binary Max-Heap
+- Binary Max-Heap
 
-\- Priority Queue
+- Priority Queue
 
-\- AVL Tree
+- AVL Tree
 
-\- Hash Table with Separate Chaining
+- Hash Table with Separate Chaining
 
-\- Hash Table with Open Addressing
-
-
-
-Week 3 benchmarks compare custom structures with Python `heapq`, `dict`, and list search.
+- Hash Table with Open Addressing
 
 
 
-\## Project Structure
+Week 3 benchmarks compare custom data structures with Python `heapq`, `dict`, and list search.
+
+
+
+## Week 4
+
+
+
+Implemented and analyzed:
+
+
+
+- Adjacency List Graph
+
+- Adjacency Matrix Graph
+
+- Breadth-First Search
+
+- Iterative Depth-First Search
+
+- Recursive Depth-First Search
+
+- Dijkstra's Shortest Path Algorithm
+
+- Heap-Based Priority Queue
+
+- List-Based Priority Queue
+
+- Graph Generation and Visualization
+
+
+
+Week 4 benchmarks compare adjacency list and matrix representations, BFS and DFS on sparse and dense graphs, and heap-based versus list-based Dijkstra.
+
+
+
+## Project Structure
 
 
 
@@ -80,7 +112,11 @@ src/
 
 ├── sorting/
 
-└── structures/
+├── structures/
+
+├── graphs/
+
+└── utils/
 
 
 
@@ -91,4 +127,5 @@ benchmarks/
 analysis/
 
 examples/
+
 
