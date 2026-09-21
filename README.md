@@ -18,11 +18,9 @@ Implemented and compared:
 
 
 
-- Bubble Sort
-
-- Selection Sort
-
-- Insertion Sort
+* Bubble Sort
+* Selection Sort
+* Insertion Sort
 
 
 
@@ -34,9 +32,8 @@ Added divide-and-conquer sorting algorithms:
 
 
 
-- Merge Sort
-
-- QuickSort
+* Merge Sort
+* QuickSort
 
 
 
@@ -52,17 +49,12 @@ Implemented and analyzed:
 
 
 
-- Binary Min-Heap
-
-- Binary Max-Heap
-
-- Priority Queue
-
-- AVL Tree
-
-- Hash Table with Separate Chaining
-
-- Hash Table with Open Addressing
+* Binary Min-Heap
+* Binary Max-Heap
+* Priority Queue
+* AVL Tree
+* Hash Table with Separate Chaining
+* Hash Table with Open Addressing
 
 
 
@@ -78,23 +70,15 @@ Implemented and analyzed:
 
 
 
-- Adjacency List Graph
-
-- Adjacency Matrix Graph
-
-- Breadth-First Search
-
-- Iterative Depth-First Search
-
-- Recursive Depth-First Search
-
-- Dijkstra's Shortest Path Algorithm
-
-- Heap-Based Priority Queue
-
-- List-Based Priority Queue
-
-- Graph Generation and Visualization
+* Adjacency List Graph
+* Adjacency Matrix Graph
+* Breadth-First Search
+* Iterative Depth-First Search
+* Recursive Depth-First Search
+* Dijkstra's Shortest Path Algorithm
+* Heap-Based Priority Queue
+* List-Based Priority Queue
+* Graph Generation and Visualization
 
 
 
@@ -127,5 +111,26 @@ benchmarks/
 analysis/
 
 examples/
+
+## Setup
+
+
+
+This project was developed using Python 3.14.5.
+
+
+
+Create and activate a virtual environment:
+
+
+
+```powershell
+
+py -3.14 -m venv .venv
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+.\\.venv\\Scripts\\Activate.ps1
+
 
 
