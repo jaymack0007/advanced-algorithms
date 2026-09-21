@@ -112,6 +112,8 @@ analysis/
 
 examples/
 
+```
+
 ## Setup
 
 
@@ -132,5 +134,77 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 .\\.venv\\Scripts\\Activate.ps1
 
+```
 
+
+
+Install the required packages:
+
+
+
+```powershell
+
+python -m pip install -r requirements.txt
+
+```
+
+
+
+\## Run Tests
+
+
+
+```powershell
+
+python -m pytest tests\\ -v
+
+```
+
+
+
+\## Run Week 4 Demo
+
+
+
+```powershell
+
+python .\\examples\\week4\_demo.py
+
+```
+
+
+
+\## Run Week 4 Benchmarks
+
+
+
+```powershell
+
+python .\\benchmarks\\week4\_graph\_benchmark.py
+
+```
+
+
+
+Week 4 benchmark results are stored in:
+
+
+
+```text
+
+benchmarks/results/
+
+```
+
+
+
+The Week 4 report is located at:
+
+
+
+```text
+
+analysis/week4\_report.md
+
+```
 

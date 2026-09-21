@@ -60,14 +60,9 @@ Neighbor retrieval was also faster with the adjacency list in this sparse test. 
 
 ### BFS vs DFS
 
-
+Both BFS and DFS performed well on sparse graphs. At 100 nodes, BFS averaged about 0.00116 seconds and DFS about 0.00073 seconds. At 1,000 nodes, BFS averaged about 0.02305 seconds and DFS about 0.02427 seconds. Their peak additional memory use was also very similar on the larger sparse graphs, at about 46 KB each.
 
 The dense graph results showed a larger difference. At 1,000 nodes with a density of 0.25, BFS averaged about 0.05472 seconds while DFS averaged about 0.08647 seconds. Both algorithms still follow O(V + E), but the larger number of edges increased the amount of work required.
-
-
-The dense graph results showed a larger difference. At 1,000 nodes with a density of 0.25, BFS averaged about 0.01437 seconds while DFS averaged about 0.02230 seconds. Both algorithms still follow O(V + E), but the larger number of edges increased the amount of work required.
-
-
 
 The memory results were especially noticeable for dense DFS. At 1,000 nodes, BFS used about 54 KB of peak additional memory, while iterative DFS used about 1.06 MB. This happened because the DFS stack could contain many pending neighbors at the same time in a dense graph. BFS used a queue and marked nodes when they were added, which kept the number of pending entries lower in this particular dense graph. The result does not mean BFS will always use less memory than DFS, but it shows that graph structure and implementation details can change the practical memory cost.
 
@@ -92,7 +87,7 @@ The benchmarks showed that no single graph representation or traversal algorithm
 
 BFS and DFS both have O(V + E) time complexity, but they explore a graph differently. BFS works level by level and is useful when finding the fewest edges between nodes in an unweighted graph. DFS follows one branch as deeply as possible before backtracking, which makes it useful for connectivity checks, cycle detection, and other problems where deep exploration is helpful. In my tests BFS was slightly faster, especially on the dense graphs, but that is an empirical result from these graphs rather than a rule that BFS is always faster.
 
-Graph density also had a clear effect. The sparse 1,000-node graph took about 0.0231 seconds for BFS, while the dense graph took about 0.0547 seconds. DFS increased from about 0.0243 seconds to about 0.0865 seconds.. Even with the same number of vertices, adding edges increases the amount of work required by both traversal algorithms.
+Graph density also had a clear effect. The sparse 1,000-node graph took about 0.0231 seconds for BFS, while the dense graph took about 0.0547 seconds. DFS increased from about 0.0243 seconds to about 0.0865 seconds. Even with the same number of vertices, adding edges increases the amount of work required by both traversal algorithms.
 
 These ideas have practical importance. Social networks can use graph traversal to discover connections, routing systems can use weighted shortest paths to choose efficient routes, and AI planning can represent states and possible actions as nodes and edges. The benchmark results show why the structure of the graph should be considered before choosing a representation or algorithm.
 
