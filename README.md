@@ -1,4 +1,4 @@
-# Advanced Algorithms
+\# Advanced Algorithms
 
 
 
@@ -10,7 +10,7 @@ This repository contains coursework and benchmarking projects for CSC5300 Advanc
 
 
 
-## Week 1
+\## Week 1
 
 
 
@@ -18,13 +18,19 @@ Implemented and compared:
 
 
 
-* Bubble Sort
-* Selection Sort
-* Insertion Sort
+\- Bubble Sort
+
+\- Selection Sort
+
+\- Insertion Sort
 
 
 
-## Week 2
+Benchmarks compared the sorting algorithms across different input sizes and data types.
+
+
+
+\## Week 2
 
 
 
@@ -32,37 +38,17 @@ Added divide-and-conquer sorting algorithms:
 
 
 
-* Merge Sort
-* QuickSort
+\- Merge Sort
+
+\- QuickSort
 
 
 
-Benchmarks compared all five sorting algorithms across multiple input sizes and data types.
+Benchmarks compared all five sorting algorithms across random, sorted, reverse, nearly sorted, and duplicate-heavy data.
 
 
 
-## Week 3
-
-
-
-Implemented and analyzed:
-
-
-
-* Binary Min-Heap
-* Binary Max-Heap
-* Priority Queue
-* AVL Tree
-* Hash Table with Separate Chaining
-* Hash Table with Open Addressing
-
-
-
-Week 3 benchmarks compare custom data structures with Python `heapq`, `dict`, and list search.
-
-
-
-## Week 4
+\## Week 3
 
 
 
@@ -70,23 +56,121 @@ Implemented and analyzed:
 
 
 
-* Adjacency List Graph
-* Adjacency Matrix Graph
-* Breadth-First Search
-* Iterative Depth-First Search
-* Recursive Depth-First Search
-* Dijkstra's Shortest Path Algorithm
-* Heap-Based Priority Queue
-* List-Based Priority Queue
-* Graph Generation and Visualization
+\- Binary Min-Heap
+
+\- Binary Max-Heap
+
+\- Priority Queue
+
+\- AVL Tree
+
+\- Hash Table with Separate Chaining
+
+\- Hash Table with Open Addressing
 
 
 
-Week 4 benchmarks compare adjacency list and matrix representations, BFS and DFS on sparse and dense graphs, and heap-based versus list-based Dijkstra.
+Week 3 benchmarks compared custom data structures with Python `heapq`, `dict`, and list search.
 
 
 
-## Project Structure
+\## Week 4
+
+
+
+Implemented and analyzed:
+
+
+
+\- Adjacency List Graph
+
+\- Adjacency Matrix Graph
+
+\- Breadth-First Search
+
+\- Iterative Depth-First Search
+
+\- Recursive Depth-First Search
+
+\- Dijkstra's Shortest Path Algorithm
+
+\- Heap-Based Priority Queue
+
+\- List-Based Priority Queue
+
+\- Graph Generation and Visualization
+
+
+
+Week 4 benchmarks compared adjacency list and matrix representations, BFS and DFS on sparse and dense graphs, and heap-based versus list-based Dijkstra.
+
+
+
+\## Week 5
+
+
+
+Implemented and analyzed dynamic programming solutions for:
+
+
+
+\- Fibonacci
+
+\- 0/1 Knapsack
+
+\- Longest Common Subsequence
+
+
+
+Each problem includes recursive and dynamic programming approaches.
+
+
+
+Fibonacci includes:
+
+
+
+\- Naive Recursion
+
+\- Top-Down Memoization
+
+\- Bottom-Up Tabulation
+
+
+
+Knapsack includes:
+
+
+
+\- Naive Recursion
+
+\- Top-Down Memoization
+
+\- Bottom-Up Tabulation
+
+\- Optimal item reconstruction
+
+
+
+Longest Common Subsequence includes:
+
+
+
+\- Naive Recursion
+
+\- Top-Down Memoization
+
+\- Bottom-Up Tabulation
+
+\- Subsequence reconstruction
+
+
+
+Week 5 benchmarks compare execution time, memory use, recursive calls, recursion depth, and available speedup values. Larger naive recursive inputs are skipped when exponential growth makes direct execution impractical.
+
+
+
+\## Project Structure
 
 
 
@@ -99,6 +183,8 @@ src/
 ├── structures/
 
 ├── graphs/
+
+├── dp/
 
 └── utils/
 
@@ -114,7 +200,9 @@ examples/
 
 ```
 
-## Setup
+
+
+\## Setup
 
 
 
@@ -150,43 +238,65 @@ python -m pip install -r requirements.txt
 
 
 
-\## Run Tests
+\## Run All Tests
 
 
 
 ```powershell
 
-python -m pytest tests\\ -v
+python -m pytest .\\tests\\ -q
 
 ```
 
 
 
-\## Run Week 4 Demo
+\## Week 5 Tests
+
+
+
+Run individual Week 5 test files:
 
 
 
 ```powershell
 
-python .\\examples\\week4\_demo.py
+python -m pytest .\\tests\\test\_fibonacci.py -v
+
+python -m pytest .\\tests\\test\_knapsack.py -v
+
+python -m pytest .\\tests\\test\_lcs.py -v
+
+python -m pytest .\\tests\\test\_dp\_benchmark.py -v
 
 ```
 
 
 
-\## Run Week 4 Benchmarks
+\## Run Week 5 Demo
 
 
 
 ```powershell
 
-python .\\benchmarks\\week4\_graph\_benchmark.py
+python .\\examples\\week5\_demo.py
 
 ```
 
 
 
-Week 4 benchmark results are stored in:
+\## Run Week 5 Benchmarks
+
+
+
+```powershell
+
+python .\\benchmarks\\week5\_dp\_benchmark.py
+
+```
+
+
+
+Week 5 benchmark results are stored in:
 
 
 
@@ -198,13 +308,31 @@ benchmarks/results/
 
 
 
-The Week 4 report is located at:
+Required Week 5 result files:
 
 
 
 ```text
 
-analysis/week4\_report.md
+fibonacci\_comparison.png
+
+knapsack\_performance.png
+
+lcs\_performance.png
+
+dp\_vs\_recursive\_table.csv
+
+```
+
+
+
+The Week 5 technical report is located at:
+
+
+
+```text
+
+analysis/week5\_report.md
 
 ```
 

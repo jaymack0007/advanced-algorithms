@@ -1,0 +1,55 @@
+problem,algorithm,input_size,time_seconds,memory_bytes,calls,max_depth,speedup,status
+Fibonacci,Naive Recursive,10,0.00043620000360533595,144.0,177.0,10.0,1.0,measured
+Fibonacci,Memoized,10,1.780001912266016e-05,976.0,19.0,10.0,24.5055918535523,measured
+Fibonacci,Tabulated,10,9.199982741847634e-06,0.0,0.0,0.0,47.41313281178328,measured
+Fibonacci,Naive Recursive,20,0.005704499984858558,168.0,21891.0,20.0,1.0,measured
+Fibonacci,Memoized,20,1.7499987734481692e-05,976.0,39.0,20.0,325.9716561754214,measured
+Fibonacci,Tabulated,20,3.3999967854470015e-06,48.0,0.0,0.0,1677.7956994769866,measured
+Fibonacci,Naive Recursive,30,0.8301420999923721,168.0,2692537.0,30.0,1.0,measured
+Fibonacci,Memoized,30,3.500000457279384e-05,1792.0,59.0,30.0,23718.3426152366,measured
+Fibonacci,Tabulated,30,5.999987479299307e-06,48.0,0.0,0.0,138357.30538713027,measured
+Fibonacci,Naive Recursive,35,,,29860703.0,35.0,,skipped_exponential
+Fibonacci,Memoized,35,6.799999391660094e-05,1816.0,69.0,35.0,,measured
+Fibonacci,Tabulated,35,4.0000013541430235e-06,24.0,0.0,0.0,,measured
+Fibonacci,Naive Recursive,40,,,331160281.0,40.0,,skipped_exponential
+Fibonacci,Memoized,40,7.510001887567341e-05,1856.0,79.0,40.0,,measured
+Fibonacci,Tabulated,40,5.399982910603285e-06,88.0,0.0,0.0,,measured
+Fibonacci,Naive Recursive,45,,,3672623805.0,45.0,,skipped_exponential
+Fibonacci,Memoized,45,7.869998808018863e-05,3488.0,89.0,45.0,,measured
+Fibonacci,Tabulated,45,6.400019628927112e-06,120.0,0.0,0.0,,measured
+Knapsack,Naive Recursive,5,8.620001608505845e-05,496.0,21.0,6.0,1.0,measured
+Knapsack,Memoized,5,0.0009879000135697424,1662.0,21.0,6.0,0.08725581020449395,measured
+Knapsack,Tabulated,5,5.3099996875971556e-05,696.0,0.0,0.0,1.623352564151752,measured
+Knapsack,Naive Recursive,10,0.0009470999939367175,584.0,437.0,11.0,1.0,measured
+Knapsack,Memoized,10,0.00018170001567341387,8150.0,150.0,11.0,5.212437601761287,measured
+Knapsack,Tabulated,10,9.739998495206237e-05,2024.0,0.0,0.0,9.723820741890817,measured
+Knapsack,Naive Recursive,15,0.030096999980742112,584.0,10434.0,16.0,1.0,measured
+Knapsack,Memoized,15,0.0004884999943897128,25902.0,459.0,16.0,61.611054915860436,measured
+Knapsack,Tabulated,15,8.259998867288232e-05,3560.0,0.0,0.0,364.37050978220043,measured
+Knapsack,Naive Recursive,20,,,,,,skipped_exponential
+Knapsack,Memoized,20,0.0015700999938417226,51134.0,909.0,21.0,,measured
+Knapsack,Tabulated,20,0.00023380000493489206,6032.0,0.0,0.0,,measured
+Knapsack,Naive Recursive,30,,,,,,skipped_exponential
+Knapsack,Memoized,30,0.009299600002123043,84646.0,2219.0,31.0,,measured
+Knapsack,Tabulated,30,0.00023460001102648675,12392.0,0.0,0.0,,measured
+Knapsack,Naive Recursive,40,,,,,,skipped_exponential
+Knapsack,Memoized,40,0.004196299996692687,198510.0,3996.0,41.0,,measured
+Knapsack,Tabulated,40,0.0006868999917060137,26720.0,0.0,0.0,,measured
+LCS,Naive Recursive,10,0.0006794999935664237,772.0,1941.0,18.0,1.0,measured
+LCS,Memoized,10,0.00014509999891743064,6857.0,116.0,18.0,4.682977247664172,measured
+LCS,Tabulated,10,3.290001768618822e-05,1128.0,0.0,0.0,20.65348414240169,measured
+LCS,Naive Recursive,50,,,,,,skipped_exponential
+LCS,Memoized,50,0.0020329999970272183,111393.0,3208.0,86.0,,measured
+LCS,Tabulated,50,0.00039530001231469214,21744.0,0.0,0.0,,measured
+LCS,Naive Recursive,100,,,,,,skipped_exponential
+LCS,Memoized,100,0.018186999979661778,674441.0,12541.0,179.0,,measured
+LCS,Tabulated,100,0.0032798000029288232,85280.0,0.0,0.0,,measured
+LCS,Naive Recursive,250,,,,,,skipped_exponential
+LCS,Memoized,250,0.31020449998322874,6613513.0,78478.0,428.0,,measured
+LCS,Tabulated,250,0.008922499982872978,520496.0,0.0,0.0,,measured
+LCS,Naive Recursive,500,,,,,,skipped_exponential
+LCS,Memoized,500,2.9320853000099305,29767297.0,304230.0,849.0,,measured
+LCS,Tabulated,500,0.18304239999270067,2178352.0,0.0,0.0,,measured
+LCS,Naive Recursive,1000,,,,,,skipped_exponential
+LCS,Memoized,1000,29.512805500009563,128670689.0,1252522.0,1696.0,,measured
+LCS,Tabulated,1000,1.414452800003346,12003376.0,0.0,0.0,,measured
