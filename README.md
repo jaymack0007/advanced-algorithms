@@ -1,4 +1,4 @@
-\# Advanced Algorithms
+# Advanced Algorithms
 
 
 
@@ -10,7 +10,7 @@ This repository contains coursework and benchmarking projects for CSC5300 Advanc
 
 
 
-\## Week 1
+## Week 1
 
 
 
@@ -18,11 +18,11 @@ Implemented and compared:
 
 
 
-\- Bubble Sort
+- Bubble Sort
 
-\- Selection Sort
+- Selection Sort
 
-\- Insertion Sort
+- Insertion Sort
 
 
 
@@ -30,7 +30,7 @@ Benchmarks compared the sorting algorithms across different input sizes and data
 
 
 
-\## Week 2
+## Week 2
 
 
 
@@ -38,9 +38,9 @@ Added divide-and-conquer sorting algorithms:
 
 
 
-\- Merge Sort
+- Merge Sort
 
-\- QuickSort
+- QuickSort
 
 
 
@@ -48,7 +48,7 @@ Benchmarks compared all five sorting algorithms across random, sorted, reverse, 
 
 
 
-\## Week 3
+## Week 3
 
 
 
@@ -56,17 +56,17 @@ Implemented and analyzed:
 
 
 
-\- Binary Min-Heap
+- Binary Min-Heap
 
-\- Binary Max-Heap
+- Binary Max-Heap
 
-\- Priority Queue
+- Priority Queue
 
-\- AVL Tree
+- AVL Tree
 
-\- Hash Table with Separate Chaining
+- Hash Table with Separate Chaining
 
-\- Hash Table with Open Addressing
+- Hash Table with Open Addressing
 
 
 
@@ -74,7 +74,7 @@ Week 3 benchmarks compared custom data structures with Python `heapq`, `dict`, a
 
 
 
-\## Week 4
+## Week 4
 
 
 
@@ -82,23 +82,23 @@ Implemented and analyzed:
 
 
 
-\- Adjacency List Graph
+- Adjacency List Graph
 
-\- Adjacency Matrix Graph
+- Adjacency Matrix Graph
 
-\- Breadth-First Search
+- Breadth-First Search
 
-\- Iterative Depth-First Search
+- Iterative Depth-First Search
 
-\- Recursive Depth-First Search
+- Recursive Depth-First Search
 
-\- Dijkstra's Shortest Path Algorithm
+- Dijkstra's Shortest Path Algorithm
 
-\- Heap-Based Priority Queue
+- Heap-Based Priority Queue
 
-\- List-Based Priority Queue
+- List-Based Priority Queue
 
-\- Graph Generation and Visualization
+- Graph Generation and Visualization
 
 
 
@@ -106,7 +106,7 @@ Week 4 benchmarks compared adjacency list and matrix representations, BFS and DF
 
 
 
-\## Week 5
+## Week 5
 
 
 
@@ -114,11 +114,11 @@ Implemented and analyzed dynamic programming solutions for:
 
 
 
-\- Fibonacci
+- Fibonacci
 
-\- 0/1 Knapsack
+- 0/1 Knapsack
 
-\- Longest Common Subsequence
+- Longest Common Subsequence
 
 
 
@@ -130,11 +130,11 @@ Fibonacci includes:
 
 
 
-\- Naive Recursion
+- Naive Recursion
 
-\- Top-Down Memoization
+- Top-Down Memoization
 
-\- Bottom-Up Tabulation
+- Bottom-Up Tabulation
 
 
 
@@ -142,13 +142,13 @@ Knapsack includes:
 
 
 
-\- Naive Recursion
+- Naive Recursion
 
-\- Top-Down Memoization
+- Top-Down Memoization
 
-\- Bottom-Up Tabulation
+- Bottom-Up Tabulation
 
-\- Optimal item reconstruction
+- Optimal item reconstruction
 
 
 
@@ -156,13 +156,13 @@ Longest Common Subsequence includes:
 
 
 
-\- Naive Recursion
+- Naive Recursion
 
-\- Top-Down Memoization
+- Top-Down Memoization
 
-\- Bottom-Up Tabulation
+- Bottom-Up Tabulation
 
-\- Subsequence reconstruction
+- Subsequence reconstruction
 
 
 
@@ -170,7 +170,7 @@ Week 5 benchmarks compare execution time, memory use, recursive calls, recursion
 
 
 
-\## Project Structure
+## Project Structure
 
 
 
@@ -202,7 +202,7 @@ examples/
 
 
 
-\## Setup
+## Setup
 
 
 
@@ -220,7 +220,7 @@ py -3.14 -m venv .venv
 
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
-.\\.venv\\Scripts\\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 
 ```
 
@@ -238,19 +238,19 @@ python -m pip install -r requirements.txt
 
 
 
-\## Run All Tests
+## Run All Tests
 
 
 
 ```powershell
 
-python -m pytest .\\tests\\ -q
+python -m pytest .\tests\ -q
 
 ```
 
 
 
-\## Week 5 Tests
+## Week 5 Tests
 
 
 
@@ -260,37 +260,37 @@ Run individual Week 5 test files:
 
 ```powershell
 
-python -m pytest .\\tests\\test\_fibonacci.py -v
+python -m pytest .\tests\test_fibonacci.py -v
 
-python -m pytest .\\tests\\test\_knapsack.py -v
+python -m pytest .\tests\test_knapsack.py -v
 
-python -m pytest .\\tests\\test\_lcs.py -v
+python -m pytest .\tests\test_lcs.py -v
 
-python -m pytest .\\tests\\test\_dp\_benchmark.py -v
-
-```
-
-
-
-\## Run Week 5 Demo
-
-
-
-```powershell
-
-python .\\examples\\week5\_demo.py
+python -m pytest .\tests\test_dp_benchmark.py -v
 
 ```
 
 
 
-\## Run Week 5 Benchmarks
+## Run Week 5 Demo
 
 
 
 ```powershell
 
-python .\\benchmarks\\week5\_dp\_benchmark.py
+python .\examples\week5_demo.py
+
+```
+
+
+
+## Run Week 5 Benchmarks
+
+
+
+```powershell
+
+python .\benchmarks\week5_dp_benchmark.py
 
 ```
 
@@ -314,13 +314,13 @@ Required Week 5 result files:
 
 ```text
 
-fibonacci\_comparison.png
+fibonacci_comparison.png
 
-knapsack\_performance.png
+knapsack_performance.png
 
-lcs\_performance.png
+lcs_performance.png
 
-dp\_vs\_recursive\_table.csv
+dp_vs_recursive_table.csv
 
 ```
 
@@ -332,7 +332,7 @@ The Week 5 technical report is located at:
 
 ```text
 
-analysis/week5\_report.md
+analysis/week5_report.md
 
 ```
 

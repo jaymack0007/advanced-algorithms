@@ -1,4 +1,4 @@
-\# Week 5 Dynamic Programming Performance Report
+# Week 5 Dynamic Programming Performance Report
 
 
 
@@ -6,7 +6,7 @@ Jaymes McKenzie
 
 
 
-\## Executive Summary
+## Executive Summary
 
 
 
@@ -22,7 +22,7 @@ The most dramatic example was Fibonacci at n = 30. Naive recursion required 2,69
 
 
 
-\## Methodology
+## Methodology
 
 
 
@@ -42,11 +42,11 @@ LCS used string lengths of 10, 50, 100, 250, 500, and 1,000 characters. Naive re
 
 
 
-\## Results
+## Results
 
 
 
-\### Fibonacci
+### Fibonacci
 
 
 
@@ -62,11 +62,11 @@ The theoretical recursive call counts also show why larger naive inputs were not
 
 
 
-!\[Fibonacci Comparison](../benchmarks/results/fibonacci\_comparison.png)
+![Fibonacci Comparison](../benchmarks/results/fibonacci_comparison.png)
 
 
 
-\### 0/1 Knapsack
+### 0/1 Knapsack
 
 
 
@@ -82,11 +82,11 @@ The dynamic programming versions continued to handle larger inputs. At 40 items,
 
 
 
-!\[Knapsack Performance](../benchmarks/results/knapsack\_performance.png)
+![Knapsack Performance](../benchmarks/results/knapsack_performance.png)
 
 
 
-\### Longest Common Subsequence
+### Longest Common Subsequence
 
 
 
@@ -102,11 +102,11 @@ At length 1,000, memoization required approximately 29.512806 seconds, 1,252,522
 
 
 
-!\[LCS Performance](../benchmarks/results/lcs\_performance.png)
+![LCS Performance](../benchmarks/results/lcs_performance.png)
 
 
 
-\## Discussion
+## Discussion
 
 
 
@@ -130,7 +130,7 @@ Memory is one trade-off of dynamic programming. Storing results requires additio
 
 
 
-\## Conclusion
+## Conclusion
 
 
 
@@ -146,13 +146,13 @@ Overall, the project showed that recognizing overlapping subproblems and optimal
 
 
 
-\## References
+## References
 
 
 
-Amakobe, M. (2025). \*Advanced Algorithms: A Journey Through Computational Problem Solving\*. Chapter 6: Dynamic Programming, Sections 6.1-6.4.
+Amakobe, M. (2025). *Advanced Algorithms: A Journey Through Computational Problem Solving*. Chapter 6: Dynamic Programming, Sections 6.1-6.4.
 
 
 
-Cormen, T. H., Leiserson, C. E., Rivest, R. L., \& Stein, C. \*Introduction to Algorithms\* (4th ed.).
+Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. *Introduction to Algorithms* (4th ed.).
 
