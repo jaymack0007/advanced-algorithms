@@ -58,11 +58,10 @@ The optimized version was also faster in every measured case. At 80 items it was
 
 
 
-The correctness of the one-dimensional version depends on processing capacity from high to low. For each item, `dp\[w]` is updated using `dp\[w - weight]`. Moving backward ensures that the smaller-capacity value still represents the previous item set. If capacity were processed from low to high, the current item could be reused during the same iteration, which would no longer represent 0/1 Knapsack.
+The correctness of the one-dimensional version depends on processing capacity from high to low. For each item, `dp[w]` is updated using `dp[w - weight]`. Moving backward ensures that the smaller-capacity value still represents the previous item set. If capacity were processed from low to high, the current item could be reused during the same iteration, which would no longer represent 0/1 Knapsack.
 
 
 
-!\[Knapsack Space Comparison](../benchmarks/results/knapsack_space_comparison.png)
 
 
 
@@ -84,7 +83,6 @@ This shows that two algorithms with the same asymptotic complexity can still beh
 
 
 
-!\[MCM Performance](../benchmarks/results/mcm_performance.png)
 
 
 
@@ -106,7 +104,6 @@ This does not mean Floyd-Warshall is always faster. Its O(V^3) runtime applies r
 
 
 
-!\[Floyd-Warshall Scaling](../benchmarks/results/floyd_warshall_scaling.png)
 
 
 
@@ -128,7 +125,6 @@ At 12 cities, brute force was skipped while bitmask DP still completed in about 
 
 
 
-!\[TSP Bitmask Runtime](../benchmarks/results/tsp_bitmask_runtime.png)
 
 
 
@@ -174,9 +170,8 @@ Overall, the progression from Week 5 to Week 6 showed that strong dynamic progra
 
 
 
-Amakobe, M. (2025). \*Advanced Algorithms: A Journey Through Computational Problem Solving\*. Chapter 6: Dynamic Programming, Sections 6.5-6.8.
+Amakobe, M. (2025). *Advanced Algorithms: A Journey Through Computational Problem Solving*. Chapter 6: Dynamic Programming, Sections 6.5-6.8.
 
 
 
-Cormen, T. H., Leiserson, C. E., Rivest, R. L., \& Stein, C. \*Introduction to Algorithms\* (4th ed.).
-
+Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. *Introduction to Algorithms* (4th ed.).
