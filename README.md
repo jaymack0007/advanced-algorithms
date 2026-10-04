@@ -170,6 +170,26 @@ Week 5 benchmarks compare execution time, memory use, recursive calls, recursion
 
 
 
+## Week 6
+
+Implemented and analyzed advanced dynamic programming techniques:
+
+- Space-Optimized 0/1 Knapsack
+- Matrix Chain Multiplication
+- Floyd-Warshall All-Pairs Shortest Paths
+- Bitmask Dynamic Programming for Traveling Salesman
+
+Week 6 focuses on reducing memory use, representing DP states efficiently, solving interval-based problems, and applying dynamic programming to graphs.
+
+The benchmarks compare:
+
+- Standard vs space-optimized Knapsack
+- Memoized vs bottom-up Matrix Chain Multiplication
+- Floyd-Warshall scaling and repeated Dijkstra comparison
+- Bitmask TSP vs brute force
+
+Results include runtime, memory usage, speedup measurements, plots, and a CSV comparison table.
+
 ## Project Structure
 
 

@@ -1,37 +1,35 @@
-category,graph_type,algorithm,size,density,time_seconds,memory_bytes
-Representation,Sparse Path,Adjacency List,100,,1.4491999754682183e-06,28056.0
-Representation,Sparse Path,Adjacency Matrix,100,,3.7486000219359993e-06,31516.0
-Representation,Sparse Path,Adjacency List,1000,,4.367600078694522e-06,269856.0
-Representation,Sparse Path,Adjacency Matrix,1000,,3.636759996879846e-05,1184720.0
-Representation,Sparse Path,Adjacency List,10000,,0.00012720480002462864,2620216.0
-Representation,Sparse Path,Adjacency Matrix,10000,,0.0010120956000173465,101620184.0
-Traversal,Sparse,BFS,100,,0.001155866659246385,13341.333333333334
-Traversal,Sparse,DFS,100,,0.0007333666823493937,11749.333333333334
-Traversal,Dense,BFS,100,0.25,0.000821666675619781,13266.666666666666
-Traversal,Dense,DFS,100,0.25,0.0016283333340349297,20285.333333333332
-Traversal,Sparse,BFS,500,,0.00738830001015837,46301.333333333336
-Traversal,Sparse,DFS,500,,0.007737366657238454,45765.333333333336
-Traversal,Dense,BFS,500,0.25,0.014199000007162491,45970.666666666664
-Traversal,Dense,DFS,500,0.25,0.02182656666263938,286013.3333333333
-Traversal,Sparse,BFS,1000,,0.02305296666842575,46933.333333333336
-Traversal,Sparse,DFS,1000,,0.0242748999929366,46373.333333333336
-Traversal,Dense,BFS,1000,0.25,0.05471996666165069,54349.333333333336
-Traversal,Dense,DFS,1000,0.25,0.08647220001633589,1060125.3333333333
-Dijkstra,Weighted Directed,Heap Priority Queue,100,0.01,0.0013078333189090092,
-Dijkstra,Weighted Directed,List Priority Queue,100,0.01,0.001155266654677689,
-Dijkstra,Weighted Directed,Heap Priority Queue,500,0.01,0.016417333332356066,
-Dijkstra,Weighted Directed,List Priority Queue,500,0.01,0.056325966686320804,
-Dijkstra,Weighted Directed,Heap Priority Queue,1000,0.01,0.045894133334513754,
-Dijkstra,Weighted Directed,List Priority Queue,1000,0.01,0.3798788000325051,
-Dijkstra,Weighted Directed,Heap Priority Queue,100,0.05,0.0017103999853134155,
-Dijkstra,Weighted Directed,List Priority Queue,100,0.05,0.0030081333437313638,
-Dijkstra,Weighted Directed,Heap Priority Queue,500,0.05,0.028732466666648786,
-Dijkstra,Weighted Directed,List Priority Queue,500,0.05,0.15949556664175665,
-Dijkstra,Weighted Directed,Heap Priority Queue,1000,0.05,0.09489776665577665,
-Dijkstra,Weighted Directed,List Priority Queue,1000,0.05,0.7637064000009559,
-Dijkstra,Weighted Directed,Heap Priority Queue,100,0.1,0.0021619666755820313,
-Dijkstra,Weighted Directed,List Priority Queue,100,0.1,0.003933166658195357,
-Dijkstra,Weighted Directed,Heap Priority Queue,500,0.1,0.03424403331397722,
-Dijkstra,Weighted Directed,List Priority Queue,500,0.1,0.20782903333504996,
-Dijkstra,Weighted Directed,Heap Priority Queue,1000,0.1,0.13164273331252238,
-Dijkstra,Weighted Directed,List Priority Queue,1000,0.1,0.9415527999905559,
+problem,algorithm,input_size,time_seconds,memory_bytes,speedup,status
+Knapsack,Standard DP,20,0.0013460000045597553,7560.0,1.0,measured
+Knapsack,Space Optimized,20,0.00023310002870857716,376.0,5.774345082739271,measured
+Knapsack,Standard DP,40,0.0008506000740453601,36040.0,1.0,measured
+Knapsack,Space Optimized,40,0.00030750001315027475,656.0,2.7661789842905575,measured
+Knapsack,Standard DP,80,0.011395700043067336,227024.0,1.0,measured
+Knapsack,Space Optimized,80,0.0012896000407636166,2136.0,8.836615759037624,measured
+Knapsack,Standard DP,120,0.021867399918846786,583336.0,1.0,measured
+Knapsack,Space Optimized,120,0.00562259997241199,5192.0,3.8891971732191504,measured
+MCM,Memoized,5,0.0005395999178290367,4309.0,1.0,measured
+MCM,Bottom Up,5,7.690000347793102e-05,1420.0,7.016903685627175,measured
+MCM,Memoized,10,0.00046520004980266094,13909.0,1.0,measured
+MCM,Bottom Up,10,0.0002343999221920967,3277.0,1.984642509486064,measured
+MCM,Memoized,20,0.003292500041425228,52909.0,1.0,measured
+MCM,Bottom Up,20,0.0025194999761879444,14612.0,1.3068069349247817,measured
+MCM,Memoized,30,0.012535999994724989,96549.0,1.0,measured
+MCM,Bottom Up,30,0.009312800015322864,31357.0,1.346104283792073,measured
+MCM,Memoized,40,0.02746300003491342,184909.0,1.0,measured
+MCM,Bottom Up,40,0.02751159993931651,56724.0,0.9982334758970657,measured
+Floyd-Warshall,Floyd-Warshall,50,0.010408300091512501,46552.0,,measured
+Floyd-Warshall,Repeated Dijkstra,50,0.014769400004297495,,0.7047205769011583,measured
+Floyd-Warshall,Floyd-Warshall,100,0.10814789996948093,170192.0,,measured
+Floyd-Warshall,Repeated Dijkstra,100,0.13017709995619953,,0.8307751517422748,measured
+Floyd-Warshall,Floyd-Warshall,200,0.8236361000454053,661296.0,,measured
+Floyd-Warshall,Floyd-Warshall,500,29.857296000001952,4064808.0,,measured
+TSP,Brute Force,4,0.0004875999875366688,432.0,1.0,measured
+TSP,Bitmask DP,4,0.001236799987964332,1376.0,0.3942432020388495,measured
+TSP,Brute Force,6,0.00020469992887228727,512.0,1.0,measured
+TSP,Bitmask DP,6,0.0007841999176889658,10800.0,0.2610302860978833,measured
+TSP,Brute Force,8,0.0116155999712646,640.0,1.0,measured
+TSP,Bitmask DP,8,0.0013569999719038606,61776.0,8.559764341754557,measured
+TSP,Brute Force,10,1.0683525999775156,640.0,1.0,measured
+TSP,Bitmask DP,10,0.00762610009405762,292208.0,140.0916047259848,measured
+TSP,Brute Force,12,,,,skipped_factorial
+TSP,Bitmask DP,12,0.07563410000875592,1307312.0,,measured
