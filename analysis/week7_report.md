@@ -120,23 +120,13 @@ The deterministic trial-division check on 1,000,003 took about 0.000055 seconds.
 
 ### Bloom Filter
 
+The Bloom filter demonstrated both load and memory-versus-accuracy trade-offs. The final implementation uses a packed byte array, so a 10,000-bit filter requires 1,250 bytes.
 
+With storage fixed at 1,250 bytes, the observed false-positive rate increased with more inserted items. At 1,000 items, the observed rate was 0.0110 compared with a theoretical rate of about 0.0118. At 2,000 items, it reached 0.0892, close to the theoretical 0.0920.
 
-The Bloom filter demonstrated the trade-off between memory efficiency and certainty. With only 250 stored items, no false positives were observed, while the theoretical rate was about 0.000082.
-
-
-
-As more items were added, the false-positive rate increased. At 1,000 items, the observed rate was 0.0110 compared with a theoretical rate of about 0.0118. At 1,500 items, the observed rate was 0.0406 compared with 0.0414 theoretically. At 2,000 items, the observed rate reached 0.0892, close to the expected 0.0920.
-
-
-
-The bit-array load factor also increased from about 9.5% to 55.3%. These results show why Bloom filters are useful when saving memory is more important than absolute certainty. A negative result is reliable, while a positive result means the item may be present.
-
-
+The memory experiment held 1,000 items constant while changing filter size. At 250 bytes, the observed false-positive rate was 0.5512. It dropped to 0.1006 at 625 bytes, 0.0110 at 1,250 bytes, 0.0002 at 2,500 bytes, and zero observed false positives at 5,000 bytes. More memory therefore produced substantially better accuracy while preserving the Bloom filter's no-false-negative behavior.
 
 ![Bloom Filter False Positive Rate](../benchmarks/results/bloom_filter_fp_rate.png)
-
-
 
 ### MinHash Similarity
 

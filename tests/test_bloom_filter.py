@@ -197,3 +197,20 @@ def test_invalid_hash_count_type():
             size=100,
             hash_count="3",
         )
+
+def test_storage_bytes():
+    bloom = BloomFilter(
+        size=10000,
+        hash_count=4,
+    )
+
+    assert bloom.storage_bytes() == 1250
+
+
+def test_storage_bytes_round_up():
+    bloom = BloomFilter(
+        size=10,
+        hash_count=2,
+    )
+
+    assert bloom.storage_bytes() == 2

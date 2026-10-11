@@ -39,7 +39,10 @@ class BloomFilter:
 
         self.size = size
         self.hash_count = hash_count
-        self.bits = bytearray(size)
+
+        self.bits = bytearray(
+            (size + 7) // 8
+        )
 
     def _hashes(
         self,
@@ -81,6 +84,31 @@ class BloomFilter:
 
         return indexes
 
+    def _set_bit(
+        self,
+        index: int,
+    ) -> None:
+        """Set one bit in the packed byte array."""
+        byte_index = index // 8
+        bit_index = index % 8
+
+        self.bits[byte_index] |= (
+            1 << bit_index
+        )
+
+    def _get_bit(
+        self,
+        index: int,
+    ) -> bool:
+        """Return whether one packed bit is set."""
+        byte_index = index // 8
+        bit_index = index % 8
+
+        return bool(
+            self.bits[byte_index]
+            & (1 << bit_index)
+        )
+
     def add(
         self,
         item: Any,
@@ -89,7 +117,9 @@ class BloomFilter:
         for index in self._hashes(
             item
         ):
-            self.bits[index] = 1
+            self._set_bit(
+                index
+            )
 
     def check(
         self,
@@ -102,7 +132,7 @@ class BloomFilter:
         False means definitely not present.
         """
         return all(
-            self.bits[index]
+            self._get_bit(index)
             for index in self._hashes(
                 item
             )
@@ -111,16 +141,25 @@ class BloomFilter:
     def bit_count(
         self,
     ) -> int:
-        """Return the number of set bits."""
+        """Return the number of logical bits currently set."""
         return sum(
-            self.bits
+            byte.bit_count()
+            for byte in self.bits
         )
 
     def load_factor(
         self,
     ) -> float:
-        """Return the fraction of bits currently set."""
+        """Return the fraction of logical bits currently set."""
         return (
             self.bit_count()
             / self.size
+        )
+
+    def storage_bytes(
+        self,
+    ) -> int:
+        """Return bytes used by the packed bit array."""
+        return len(
+            self.bits
         )
