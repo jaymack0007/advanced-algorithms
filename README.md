@@ -190,6 +190,29 @@ The benchmarks compare:
 
 Results include runtime, memory usage, speedup measurements, plots, and a CSV comparison table.
 
+## Week 7
+
+Implemented and analyzed randomized and probabilistic algorithms:
+
+- Randomized QuickSort
+- Randomized QuickSelect
+- Fermat Primality Testing
+- Miller-Rabin Primality Testing
+- Bloom Filter Membership Testing
+- MinHash Similarity Estimation
+
+Week 7 focuses on using randomness to improve expected performance, avoid poor input patterns, and trade small amounts of uncertainty for speed or memory efficiency.
+
+The benchmarks compare:
+
+- Randomized vs deterministic QuickSort
+- Randomized vs deterministic selection
+- Fermat and Miller-Rabin primality testing
+- Bloom filter observed vs theoretical false-positive rates
+- MinHash estimates vs exact Jaccard similarity
+
+Results include runtime, runtime variance, comparison counts, recursion depth, accuracy, error rates, probabilistic bounds, plots, and a summary CSV.
+
 ## Project Structure
 
 
