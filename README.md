@@ -213,6 +213,32 @@ The benchmarks compare:
 
 Results include runtime, runtime variance, comparison counts, recursion depth, accuracy, error rates, probabilistic bounds, plots, and a summary CSV.
 
+## Week 8
+
+Implemented and analyzed computational complexity, NP-completeness, and approximation techniques:
+
+- 3-SAT to Vertex Cover polynomial-time reduction
+- Exact backtracking for Subset Sum
+- Greedy Subset Sum heuristic
+- Exact DFS/backtracking SAT solver
+- Randomized SAT heuristic
+- Exact exhaustive Vertex Cover
+- Vertex Cover 2-approximation
+- Exact exhaustive Traveling Salesman Problem
+- Nearest Neighbor TSP heuristic
+
+Week 8 focuses on exponential and factorial growth, polynomial-time reductions, and the trade-off between exact solutions and faster approximation or heuristic methods.
+
+The benchmarks compare exact and practical methods for Subset Sum, SAT, Vertex Cover, and TSP. Results include runtime growth, search-node counts, heuristic success rates, approximation ratios, runtime-quality trade-offs, plots, and a comparison CSV.
+
+Week 8 demo: examples/week8_demo.py
+
+Week 8 benchmark: benchmarks/week8_complexity_benchmark.py
+
+Required results: runtime_growth.png, approximation_quality.png, and comparison_table.csv.
+
+Technical report: analysis/week8_report.md
+
 ## Project Structure
 
 
