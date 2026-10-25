@@ -1,16 +1,17 @@
-"""Tests for Vertex Cover approximation algorithms."""
+"""Tests for the Week 9 Vertex Cover approximation."""
 
 import pytest
 
-from src.complexity.vertex_cover_approx import (
+from src.approximation.vertex_cover_2approx import (
     approximation_ratio,
     exact_vertex_cover,
     is_vertex_cover,
+    maximal_matching,
     vertex_cover_2approx,
 )
 
 
-def test_triangle_approximation_is_cover():
+def test_triangle_is_covered():
     edges = [
         ("A", "B"),
         ("B", "C"),
@@ -43,7 +44,7 @@ def test_triangle_optimal_size():
     ) == 2
 
 
-def test_single_edge():
+def test_single_edge_uses_both_endpoints():
     edges = [
         ("A", "B"),
     ]
@@ -58,24 +59,7 @@ def test_single_edge():
     }
 
 
-def test_path_graph():
-    edges = [
-        ("A", "B"),
-        ("B", "C"),
-        ("C", "D"),
-    ]
-
-    cover = vertex_cover_2approx(
-        edges
-    )
-
-    assert is_vertex_cover(
-        edges,
-        cover,
-    )
-
-
-def test_star_graph():
+def test_star_graph_ratio_is_two():
     edges = [
         ("C", "A"),
         ("C", "B"),
@@ -91,11 +75,6 @@ def test_star_graph():
         edges
     )
 
-    assert is_vertex_cover(
-        edges,
-        approximate,
-    )
-
     assert len(
         optimal
     ) == 1
@@ -103,24 +82,15 @@ def test_star_graph():
     assert approximation_ratio(
         approximate,
         optimal,
-    ) <= 2.0
+    ) == 2.0
 
 
-def test_empty_graph():
-    assert vertex_cover_2approx(
-        []
-    ) == set()
-
-    assert exact_vertex_cover(
-        []
-    ) == set()
-
-
-def test_approximation_ratio_triangle():
+def test_cycle_graph_ratio_at_most_two():
     edges = [
         ("A", "B"),
         ("B", "C"),
-        ("A", "C"),
+        ("C", "D"),
+        ("D", "A"),
     ]
 
     approximate = vertex_cover_2approx(
@@ -139,12 +109,84 @@ def test_approximation_ratio_triangle():
     assert 1.0 <= ratio <= 2.0
 
 
-def test_exact_cover_is_valid():
+def test_matching_edges_are_disjoint():
     edges = [
         ("A", "B"),
         ("B", "C"),
         ("C", "D"),
-        ("D", "A"),
+        ("D", "E"),
+        ("E", "F"),
+    ]
+
+    matching = maximal_matching(
+        edges
+    )
+
+    used = set()
+
+    for first, second in matching:
+        assert first not in used
+        assert second not in used
+
+        used.add(
+            first
+        )
+
+        used.add(
+            second
+        )
+
+
+def test_cover_has_two_vertices_per_matching_edge():
+    edges = [
+        ("A", "B"),
+        ("B", "C"),
+        ("C", "D"),
+        ("D", "E"),
+    ]
+
+    matching = maximal_matching(
+        edges
+    )
+
+    cover = vertex_cover_2approx(
+        edges
+    )
+
+    assert len(
+        cover
+    ) == 2 * len(
+        matching
+    )
+
+
+def test_empty_graph():
+    assert maximal_matching(
+        []
+    ) == []
+
+    assert vertex_cover_2approx(
+        []
+    ) == set()
+
+    assert exact_vertex_cover(
+        []
+    ) == set()
+
+
+def test_empty_graph_ratio():
+    assert approximation_ratio(
+        set(),
+        set(),
+    ) == 1.0
+
+
+def test_exact_cover_is_valid():
+    edges = [
+        ("A", "B"),
+        ("A", "C"),
+        ("B", "D"),
+        ("C", "D"),
     ]
 
     optimal = exact_vertex_cover(
@@ -155,6 +197,15 @@ def test_exact_cover_is_valid():
         edges,
         optimal,
     )
+
+
+def test_invalid_edge_collection_type():
+    with pytest.raises(TypeError):
+        vertex_cover_2approx(
+            {
+                ("A", "B")
+            }
+        )
 
 
 def test_invalid_edge_type():
@@ -170,16 +221,11 @@ def test_invalid_edge_length():
     with pytest.raises(ValueError):
         vertex_cover_2approx(
             [
-                ("A", "B", "C")
-            ]
-        )
-
-
-def test_invalid_vertex_type():
-    with pytest.raises(TypeError):
-        vertex_cover_2approx(
-            [
-                ("A", 2)
+                (
+                    "A",
+                    "B",
+                    "C",
+                )
             ]
         )
 
@@ -188,12 +234,15 @@ def test_self_loop_rejected():
     with pytest.raises(ValueError):
         vertex_cover_2approx(
             [
-                ("A", "A")
+                (
+                    "A",
+                    "A",
+                )
             ]
         )
 
 
-def test_invalid_empty_optimal_ratio():
+def test_invalid_ratio_for_nonempty_approximation():
     with pytest.raises(ValueError):
         approximation_ratio(
             {

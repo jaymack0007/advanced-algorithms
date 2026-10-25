@@ -239,6 +239,39 @@ Required results: runtime_growth.png, approximation_quality.png, and comparison_
 
 Technical report: analysis/week8_report.md
 
+## Week 9
+
+Implemented and analyzed approximation, LP-rounding, greedy, and randomized algorithms:
+
+- Vertex Cover maximal-matching 2-approximation
+- Greedy Uncapacitated Facility Location
+- Set Cover LP relaxation
+- Deterministic Set Cover LP rounding
+- Randomized Set Cover LP rounding
+- Metric TSP MST-doubling 2-approximation
+- Randomized Max-Cut
+- Local-search Max-Cut
+
+Week 9 focuses on designing efficient solutions when exact optimization is impractical. Exact exhaustive algorithms are used on small instances as baselines so approximation quality can be measured directly.
+
+The benchmarks compare:
+
+- Vertex Cover 2-approximation vs exact Vertex Cover
+- Greedy Facility Location vs exact Facility Location
+- Deterministic and randomized Set Cover LP rounding vs exact Set Cover
+- Metric TSP MST doubling vs exact TSP
+- Randomized and local-search Max-Cut vs exact Max-Cut
+
+Measured results include runtime, approximation ratios, optimal costs or values, LP lower bounds, randomized solution variance, and runtime variance.
+
+Week 9 demo: examples/week9_demo.py
+
+Week 9 benchmark: benchmarks/week9_approx_benchmark.py
+
+Required results: approx_ratios.png, cost_vs_optimal.png, randomized_maxcut_results.png, and comparison_table.csv.
+
+Technical report: analysis/week9_report.md
+
 ## Project Structure
 
 
