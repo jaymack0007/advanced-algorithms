@@ -1,0 +1,28 @@
+family,graph_type,vertices,edges,solver,runtime_seconds,peak_memory_mb,max_flow,min_cost,operations,operation_detail
+large_scaling,sparse_chain,1000,999,Edmonds-Karp,0.01574800000526011,0.9994735717773438,10.0,,1,1 augmentations
+large_scaling,sparse_chain,1000,999,Push-Relabel,0.03233099996577948,0.8805694580078125,10.0,,1997,"999 pushes, 998 relabels"
+large_scaling,sparse_chain,1000,999,Min-Cost Max-Flow,0.033683700021356344,0.8678741455078125,10.0,9990.0,1,1 augmentations
+large_scaling,sparse_chain,5000,4999,Edmonds-Karp,0.0947198000503704,4.4289703369140625,10.0,,1,1 augmentations
+large_scaling,sparse_chain,5000,4999,Push-Relabel,0.17575140006374568,4.505302429199219,10.0,,9997,"4999 pushes, 4998 relabels"
+large_scaling,sparse_chain,5000,4999,Min-Cost Max-Flow,0.14580249995924532,4.912261962890625,10.0,49990.0,1,1 augmentations
+large_scaling,sparse_chain,10000,9999,Edmonds-Karp,0.14146090007852763,8.721824645996094,10.0,,1,1 augmentations
+large_scaling,sparse_chain,10000,9999,Push-Relabel,0.39342989993747324,8.870574951171875,10.0,,19997,"9999 pushes, 9998 relabels"
+large_scaling,sparse_chain,10000,9999,Min-Cost Max-Flow,0.2758798999711871,9.432197570800781,10.0,99990.0,1,1 augmentations
+large_scaling,sparse_chain,25000,24999,Edmonds-Karp,0.42944589990656823,22.829269409179688,10.0,,1,1 augmentations
+large_scaling,sparse_chain,25000,24999,Push-Relabel,0.9658473000163212,24.700668334960938,10.0,,49997,"24999 pushes, 24998 relabels"
+large_scaling,sparse_chain,25000,24999,Min-Cost Max-Flow,0.7257565000327304,25.688011169433594,10.0,249990.0,1,1 augmentations
+large_scaling,sparse_chain,50000,49999,Edmonds-Karp,0.9234248000429943,45.114532470703125,10.0,,1,1 augmentations
+large_scaling,sparse_chain,50000,49999,Push-Relabel,1.7508015000494197,49.26618957519531,10.0,,99997,"49999 pushes, 49998 relabels"
+large_scaling,sparse_chain,50000,49999,Min-Cost Max-Flow,1.4255856999661773,51.12571716308594,10.0,499990.0,1,1 augmentations
+dense_comparison,dense_dag,25,62,Edmonds-Karp,0.0007655000081285834,0.02742767333984375,23.0,,8,8 augmentations
+dense_comparison,dense_dag,25,62,Push-Relabel,0.005257999990135431,0.032867431640625,23.0,,447,"258 pushes, 189 relabels"
+dense_comparison,dense_dag,25,62,Min-Cost Max-Flow,0.004378100042231381,0.031341552734375,23.0,698.0,7,7 augmentations
+dense_comparison,dense_dag,50,237,Edmonds-Karp,0.0022107999539002776,0.097198486328125,55.0,,13,13 augmentations
+dense_comparison,dense_dag,50,237,Push-Relabel,0.0035674000391736627,0.107421875,55.0,,224,"140 pushes, 84 relabels"
+dense_comparison,dense_dag,50,237,Min-Cost Max-Flow,0.014329300029203296,0.10492706298828125,55.0,701.0,12,12 augmentations
+dense_comparison,dense_dag,100,838,Edmonds-Karp,0.005108400015160441,0.3346099853515625,152.0,,28,28 augmentations
+dense_comparison,dense_dag,100,838,Push-Relabel,0.010221799951978028,0.35260772705078125,152.0,,443,"266 pushes, 177 relabels"
+dense_comparison,dense_dag,100,838,Min-Cost Max-Flow,0.125523200025782,0.34848785400390625,152.0,1779.0,38,38 augmentations
+dense_comparison,dense_dag,200,3181,Edmonds-Karp,0.083796999999322,1.38677978515625,256.0,,75,75 augmentations
+dense_comparison,dense_dag,200,3181,Push-Relabel,1.5185193000361323,1.4398269653320312,256.0,,70967,"39987 pushes, 30980 relabels"
+dense_comparison,dense_dag,200,3181,Min-Cost Max-Flow,1.194347899989225,1.5046768188476562,256.0,3903.0,104,104 augmentations
