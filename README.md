@@ -364,6 +364,48 @@ Technical report:
 analysis/ch10_report.md
 ```
 
+## Week 11
+
+Implemented and analyzed advanced string-search algorithms and indexing structures:
+
+- Knuth-Morris-Pratt (KMP)
+- Rabin-Karp with rolling hash
+- Suffix Array with Kasai LCP
+- Compressed Suffix Tree / Suffix Trie
+- Unified StringSearchEngine interface
+
+Week 11 also includes three applications:
+
+- Plagiarism detection
+- DNA / FASTA sequence search
+- Frequency-ranked autocomplete
+
+The benchmark compares direct scanning with preprocessed indexes on 10 KB and 1 MB datasets. KMP provides efficient one-time searches without preprocessing, while the suffix array has higher preprocessing cost but extremely fast repeated-query performance. Rabin-Karp collision experiments demonstrate the effect of modulus selection. The compressed suffix tree is included as the assignment-approved educational implementation and is limited to smaller inputs because of its memory overhead.
+
+Week 11 project:
+
+```text
+StringSearchEngine/
+```
+
+Week 11 benchmark:
+
+```powershell
+python -m StringSearchEngine.benchmarks.benchmark_search
+```
+
+Week 11 results:
+
+```text
+StringSearchEngine/benchmarks/results/
+```
+
+Technical report:
+
+```text
+analysis/ch11_report.md
+```
+
 ## Project Structure
 
 ```text
