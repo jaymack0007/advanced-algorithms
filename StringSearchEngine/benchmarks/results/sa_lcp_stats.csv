@@ -1,0 +1,3 @@
+dataset,size_chars,mean_lcp,max_lcp
+small_10KB,10000,2.174717471747175,19
+medium_1MB,1000000,3.5644455644455646,19
