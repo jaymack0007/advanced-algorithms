@@ -1,30 +1,20 @@
-\# Week 11 — String Search Engine
+# Week 11 — String Search Engine
 
+This project implements and compares several string-search algorithms from Chapter 32 of *Introduction to Algorithms*:
 
+- Knuth-Morris-Pratt (KMP)
 
-This project implements and compares several string-search algorithms from Chapter 32 of \*Introduction to Algorithms\*:
+- Rabin-Karp
 
+- Suffix Array with Kasai LCP
 
+- Compressed Suffix Tree / Suffix Trie
 
-\- Knuth-Morris-Pratt (KMP)
-
-\- Rabin-Karp
-
-\- Suffix Array with Kasai LCP
-
-\- Compressed Suffix Tree / Suffix Trie
-
-\- Unified StringSearchEngine interface
-
-
+- Unified StringSearchEngine interface
 
 The project also includes practical applications, visualization tools, synthetic-data generators, benchmarks, and automated tests.
 
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
 
@@ -34,167 +24,123 @@ StringSearchEngine/
 
 │   ├── kmp.py
 
-│   ├── rabin\_karp.py
+│   ├── rabin_karp.py
 
-│   ├── suffix\_array.py
+│   ├── suffix_array.py
 
-│   ├── suffix\_tree.py
+│   ├── suffix_tree.py
 
-│   └── search\_engine.py
+│   └── search_engine.py
 
 ├── applications/
 
 │   ├── plagiarism.py
 
-│   ├── dna\_search.py
+│   ├── dna_search.py
 
 │   └── autocomplete.py
 
 ├── visualization/
 
-│   ├── plot\_suffix\_array.py
+│   ├── plot_suffix_array.py
 
-│   └── draw\_suffix\_tree.py
+│   └── draw_suffix_tree.py
 
 ├── utils/
 
-│   ├── text\_loader.py
+│   ├── text_loader.py
 
-│   ├── rolling\_hash.py
+│   ├── rolling_hash.py
 
 │   └── generators.py
 
 ├── benchmarks/
 
-│   ├── benchmark\_search.py
+│   ├── benchmark_search.py
 
 │   └── results/
 
-│       ├── benchmark\_results.csv
+│       ├── benchmark_results.csv
 
-│       ├── collision\_results.csv
+│       ├── collision_results.csv
 
-│       ├── sa\_lcp\_stats.csv
+│       ├── sa_lcp_stats.csv
 
-│       ├── runtime\_comparison.png
+│       ├── runtime_comparison.png
 
-│       ├── collision\_analysis.png
+│       ├── collision_analysis.png
 
-│       ├── sa\_lcp\_stats.png
+│       ├── sa_lcp_stats.png
 
-│       └── heatmap\_dataset\_sizes.png
+│       └── heatmap_dataset_sizes.png
 
 └── analysis/
 
-&#x20;   └── chapter11\_report.md
+    └── chapter11_report.md
 
 ```
 
+## Core Algorithms
 
-
-\## Core Algorithms
-
-
-
-\### Knuth-Morris-Pratt
-
-
+### Knuth-Morris-Pratt
 
 The KMP implementation builds the longest-prefix-suffix (LPS) table and uses mismatch fallback positions instead of restarting the search. It supports overlapping matches and provides optional tracing for comparisons and fallbacks.
 
-
-
-\### Rabin-Karp
-
-
+### Rabin-Karp
 
 Rabin-Karp uses a polynomial rolling hash with configurable base and modulus values. Hash matches are always verified against the actual substring so collisions cannot create false matches.
 
-
-
 The implementation also supports multi-pattern searching by grouping patterns of equal length.
 
-
-
-\### Suffix Array and LCP
-
-
+### Suffix Array and LCP
 
 The suffix array uses prefix doubling with integer ranks and stable counting sort. Kasai's algorithm constructs the LCP array.
 
-
-
 A reusable `SuffixArrayIndex` supports repeated substring searches without rebuilding or revalidating the index for each query.
 
-
-
-\### Compressed Suffix Tree
-
-
+### Compressed Suffix Tree
 
 The suffix-tree implementation uses the assignment-approved compressed suffix-trie approach rather than Ukkonen's algorithm.
 
-
-
 It supports:
 
+- Exact substring search
 
+- Prefix matching
 
-\- Exact substring search
+- Longest repeated substring
 
-\- Prefix matching
+- Distinct substring counting
 
-\- Longest repeated substring
+- Structural statistics
 
-\- Distinct substring counting
-
-\- Structural statistics
-
-\- Visualization
-
-
+- Visualization
 
 Because this implementation explicitly inserts suffixes and uses Python object structures, it is intended primarily for smaller educational datasets.
 
-
-
-\## Unified Search Interface
-
-
+## Unified Search Interface
 
 Example:
 
-
-
 ```python
 
-from StringSearchEngine.core.search\_engine import StringSearchEngine
-
-
+from StringSearchEngine.core.search_engine import StringSearchEngine
 
 engine = StringSearchEngine("banana")
 
-
-
 result = engine.find(
 
-&#x20;   "ana",
+    "ana",
 
-&#x20;   method="kmp",
+    method="kmp",
 
 )
-
-
 
 print(result.positions)
 
 ```
 
-
-
 Available methods are:
-
-
 
 ```text
 
@@ -208,139 +154,91 @@ tree
 
 ```
 
-
-
 Suffix-array and suffix-tree indexes are created lazily so preprocessing occurs only when those methods are requested.
 
+## Applications
 
-
-\## Applications
-
-
-
-\### Plagiarism Detection
-
-
+### Plagiarism Detection
 
 The plagiarism module combines overlapping word shingles with Rabin-Karp matching and suffix-array/LCP analysis.
 
-
-
 It provides:
 
+- Document normalization
 
+- Phrase matching
 
-\- Document normalization
+- Similarity scoring
 
-\- Phrase matching
+- Longest common substring
 
-\- Similarity scoring
+- Matched-region highlighting
 
-\- Longest common substring
-
-\- Matched-region highlighting
-
-
-
-\### DNA Sequence Search
-
-
+### DNA Sequence Search
 
 The DNA module provides:
 
+- DNA normalization
 
+- FASTA parsing
 
-\- DNA normalization
+- FASTA file loading
 
-\- FASTA parsing
+- Suffix-array searching
 
-\- FASTA file loading
+- Suffix-tree searching
 
-\- Suffix-array searching
+- Multiple-pattern searches
 
-\- Suffix-tree searching
+- Longest repeated DNA sequence discovery
 
-\- Multiple-pattern searches
-
-\- Longest repeated DNA sequence discovery
-
-
-
-\### Autocomplete
-
-
+### Autocomplete
 
 The autocomplete module provides:
 
+- Prefix lookup
 
+- Top-k suggestions
 
-\- Prefix lookup
+- Frequency-based ranking
 
-\- Top-k suggestions
+- Alphabetical tie breaking
 
-\- Frequency-based ranking
+- Dynamic frequency updates
 
-\- Alphabetical tie breaking
-
-\- Dynamic frequency updates
-
-
-
-\## Visualization
-
-
+## Visualization
 
 The project can visualize:
 
+- Suffix-array positions
 
+- LCP values
 
-\- Suffix-array positions
-
-\- LCP values
-
-\- Compressed suffix-tree structure
-
-
+- Compressed suffix-tree structure
 
 Matplotlib uses the noninteractive Agg backend so figures can be generated without requiring a GUI.
 
-
-
-\## Benchmark
-
-
+## Benchmark
 
 Run the complete benchmark with:
 
-
-
 ```powershell
 
-python -m StringSearchEngine.benchmarks.benchmark\_search
+python -m StringSearchEngine.benchmarks.benchmark_search
 
 ```
-
-
 
 A smaller validation benchmark is available with:
 
-
-
 ```powershell
 
-python -m StringSearchEngine.benchmarks.benchmark\_search --smoke
+python -m StringSearchEngine.benchmarks.benchmark_search --smoke
 
 ```
 
-
-
 The official benchmark compares a 10 KB dataset and a 1 MB dataset.
 
-
-
-\### Final Results
-
-
+### Final Results
 
 | Dataset | Algorithm | Preprocessing | Average Search | Persistent Index |
 
@@ -362,23 +260,13 @@ The official benchmark compares a 10 KB dataset and a 1 MB dataset.
 
 | 1 MB | Suffix Tree | Skipped | Skipped | Skipped |
 
-
-
 All algorithms that were executed found the same three expected pattern occurrences.
-
-
 
 The compressed suffix tree was intentionally skipped on the 1 MB dataset because the assignment-approved Option A implementation has high memory overhead and does not scale appropriately to that input size.
 
-
-
-\## Rabin-Karp Collision Experiment
-
-
+## Rabin-Karp Collision Experiment
 
 The collision experiment demonstrates how modulus size affects false hash matches.
-
-
 
 | Modulus | Collisions |
 
@@ -396,19 +284,11 @@ The collision experiment demonstrates how modulus size affects false hash matche
 
 | 1,000,000,007 | 0 |
 
-
-
 Every hash hit is verified against the source text, so collisions do not affect correctness.
 
-
-
-\## Testing
-
-
+## Testing
 
 Run all repository tests with:
-
-
 
 ```powershell
 
@@ -416,11 +296,7 @@ python -m pytest .\\tests -q
 
 ```
 
-
-
 Final verified result:
-
-
 
 ```text
 
@@ -428,14 +304,10 @@ Final verified result:
 
 ```
 
-
-
 The complete analysis is available in:
-
-
 
 ```text
 
-StringSearchEngine/analysis/chapter11\_report.md
+StringSearchEngine/analysis/chapter11_report.md
 
 ```
