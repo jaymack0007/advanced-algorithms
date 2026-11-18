@@ -1,0 +1,56 @@
+"""Image filtering and compression tools for FFTAnalyzer."""
+
+from .compression import (
+    JPEG_LUMINANCE_QUANTIZATION,
+    compress_and_reconstruct,
+    compress_image,
+    dct2,
+    dct_matrix,
+    dequantize_block,
+    idct2,
+    mean_squared_error,
+    pad_image_to_block_size,
+    peak_signal_to_noise_ratio,
+    quantize_block,
+    reconstruct_image,
+    scaled_quantization_table,
+)
+from .filters import (
+    fft2,
+    fft_convolve2d,
+    frequency_denoise,
+    gaussian_blur,
+    gaussian_kernel,
+    ifft2,
+    laplacian_edges,
+    pad_image_to_power_of_two,
+    sharpen_image,
+    sobel_edges,
+)
+
+
+__all__ = [
+    "JPEG_LUMINANCE_QUANTIZATION",
+    "compress_and_reconstruct",
+    "compress_image",
+    "dct2",
+    "dct_matrix",
+    "dequantize_block",
+    "fft2",
+    "fft_convolve2d",
+    "frequency_denoise",
+    "gaussian_blur",
+    "gaussian_kernel",
+    "idct2",
+    "ifft2",
+    "laplacian_edges",
+    "mean_squared_error",
+    "pad_image_to_block_size",
+    "pad_image_to_power_of_two",
+    "peak_signal_to_noise_ratio",
+    "quantize_block",
+    "reconstruct_image",
+    "scaled_quantization_table",
+    "sharpen_image",
+    "sobel_edges",
+]

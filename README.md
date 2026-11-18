@@ -406,6 +406,83 @@ Technical report:
 analysis/ch11_report.md
 ```
 
+
+## Week 12
+
+Implemented and analyzed numerical, matrix, FFT, signal-processing, and image-processing algorithms:
+
+- Classical O(n^3) Matrix Multiplication
+- LUP Decomposition with Partial Pivoting
+- Householder QR Decomposition
+- Linear-System Solving and Determinants
+- Power Iteration
+- Numerical Error and Condition-Number Analysis
+- Recursive Radix-2 FFT
+- Iterative Bit-Reversal FFT
+- Inverse FFT
+- Linear and Circular Convolution
+- FFT-Based Low-Pass, High-Pass, and Band-Pass Filtering
+- Periodogram, PSD, Peak Detection, and STFT
+- 2D FFT Image Filtering
+- Gaussian Blur, Sobel, Laplacian, Denoising, and Sharpening
+- DCT / JPEG-Style Image Compression
+- Audio Processing
+- Time-Series Periodicity and Autocorrelation
+- FFT and Filtering Visualizations
+
+The Week 12 FFT benchmark compared the direct O(n^2) DFT with the O(n log n) FFT and tested the iterative FFT through an input size of 2^20, or 1,048,576 values.
+
+At n=1,048,576:
+
+```text
+Iterative FFT: 2.214148 seconds
+Maximum error vs NumPy: 4.479e-12
+```
+
+At n=512:
+
+```text
+Direct DFT:    0.158948 seconds
+Iterative FFT: 0.000188 seconds
+Speedup:       844.71x
+```
+
+The numerical experiments also measured matrix multiplication performance, numerical conditioning, and DCT image-compression quality.
+
+Week 12 project:
+
+```text
+FFTAnalyzer/
+```
+
+Week 12 tests:
+
+```powershell
+python -m pytest .\FFTAnalyzer\tests -q
+```
+
+Week 12 benchmark:
+
+```powershell
+python -m FFTAnalyzer.benchmarks.benchmark_fft
+```
+
+Week 12 examples:
+
+```powershell
+python -m FFTAnalyzer.examples.signal_demo
+python -m FFTAnalyzer.examples.audio_demo
+python -m FFTAnalyzer.examples.image_demo
+```
+
+Technical report:
+
+```text
+FFTAnalyzer/docs/chapter12_report.md
+```
+
+
+
 ## Project Structure
 
 ```text
